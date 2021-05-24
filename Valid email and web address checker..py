@@ -17,10 +17,9 @@ for idx,item in enumerate(list1):
         rightpart = splitter[1:]
 
         DMN = ''
-        for i in rightpart:
-            for item in i:
-                DMN = DMN + item
-        D = DMN.split('.')
+        for item in rightpart:
+            DMN = DMN + item
+        D = DMN.split('.')# D contains all the splits caused by [.] of the rightpart.
 
 
         def startingChecker(LP):
@@ -40,6 +39,8 @@ for idx,item in enumerate(list1):
                 return False
             else:
                 return True
+
+
 
 
         domainChecker(D)
